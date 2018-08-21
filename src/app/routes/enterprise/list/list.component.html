@@ -1,0 +1,14 @@
+<nz-card>
+  <sf mode="search" [schema]="searchSchema" (formSubmit)="st.reset($event)" (formReset)="st.reset($event)"></sf>
+  <simple-table #st [data]="url"
+                [columns]="columns"
+                [zeroIndexedOnPage]="true"
+                [reqReName]="{pi:'page',ps:'size'}"
+                [resReName]="{total:'data.totalElements',list: 'data.content' }"
+                [extraParams]="reqParams">
+    <ng-template #expand let-item let-index="index" let-column="column">
+      <p>企业简介：{{ item.intro }}</p>
+      <p>企业地址：{{ item.enterpriseAddress }}</p>
+    </ng-template>
+  </simple-table>
+</nz-card>

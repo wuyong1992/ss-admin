@@ -1,3 +1,7 @@
 export const environment = {
-  production: true
+  SERVER_URL: `./`,
+  URL_PREFIX: 'http://ss-api.otvoo.com',
+  production: true,
+  useHash: false,
+  hmr: false,
 };

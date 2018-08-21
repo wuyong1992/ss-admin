@@ -1,0 +1,12 @@
+<div class="modal-header">
+  <div class="modal-title">编辑招聘分类信息</div>
+</div>
+<!-- 加载img -->
+<nz-spin *ngIf="loading" class="modal-spin"></nz-spin>
+
+<sf *ngIf="!loading" #sf mode="edit" [schema]="jobCategorySchema" [formData]="jobCategory" button="none">
+  <div class="modal-footer">
+    <button nz-button type="button" (click)="closeModal()">关闭</button>
+    <button nz-button type="submit" [nzType]="'primary'" (click)="save(sf.value)" [disabled]="!sf.valid" [nzLoading]="http.loading">保存</button>
+  </div>
+</sf>

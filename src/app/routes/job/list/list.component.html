@@ -1,0 +1,20 @@
+<page-header>
+  <ng-template #action>
+    <button (click)="add()" nz-button nzType="primary">新建</button>
+  </ng-template>
+</page-header>
+<nz-card>
+  <sf mode="search" [schema]="searchSchema" (formSubmit)="st.reset($event)" (formReset)="st.reset($event)"  [layout]="'vertical'"></sf>
+  <simple-table #st [data]="url" [columns]="columns"
+                [zeroIndexedOnPage]="true"
+                [reqReName]="{pi:'page',ps:'size'}"
+                [resReName]="{total:'data.totalElements',list: 'data.content' }"
+                [extraParams]="reqParams">
+    <ng-template #expand let-item let-index="index" let-column="column">
+      <p>工作时间：{{ item.workTime }}</p>
+      <p>工作地点：{{ item.workAddress }}</p>
+      <p>工作详情：{{ item.jobDetail }}</p>
+    </ng-template>
+  </simple-table>
+
+</nz-card>
