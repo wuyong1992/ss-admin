@@ -4,6 +4,7 @@ export class UserInfo {
   enterpriseId: number;
   openid: string;
   nickname: string;
+  age: number;
   sex: number;
   province: string;
   city: string;

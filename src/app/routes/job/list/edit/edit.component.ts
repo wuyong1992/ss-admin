@@ -67,6 +67,7 @@ export class JobListEditComponent implements OnInit {
         type: 'number',
         title: '结算周期',
         enum: [
+          { label: '小时', value: 4 },
           { label: '日结', value: 1 },
           { label: '周结', value: 2 },
           { label: '月结', value: 3 },

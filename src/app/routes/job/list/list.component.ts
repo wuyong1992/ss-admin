@@ -70,6 +70,8 @@ export class JobListComponent implements OnInit {
             return '周结';
           case 3:
             return '月结';
+          case 4:
+            return '小时';
           default:
             return '';
         }

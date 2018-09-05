@@ -83,8 +83,8 @@ function getJobList(queryString: any) {
 }
 
 export const USERS = {
-  '/user': (req: MockRequest) => genData(req.queryString),
-  'GET /job/list': (req: MockRequest) => getJobList(req.queryString),
-  '/user/:id': (req: MockRequest) => list.find(w => w.id === +req.params.id),
-  'POST /user/:id': (req: MockRequest) => saveData(+req.params.id, req.body),
+  // '/user': (req: MockRequest) => genData(req.queryString),
+  // 'GET /job/list': (req: MockRequest) => getJobList(req.queryString),
+  // '/user/:id': (req: MockRequest) => list.find(w => w.id === +req.params.id),
+  // 'POST /user/:id': (req: MockRequest) => saveData(+req.params.id, req.body),
 };
